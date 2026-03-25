@@ -1,29 +1,29 @@
 # Space-Robot-PDDL
 [cite_start]This repository contains a formal AI planning solution for the **EVR-1** (Extra-Vehicular Robot 1), a six-legged autonomous agent designed for satellite outer surface inspection and maintenance in zero-gravity conditions[cite: 3].
 
-## 📖 Project Overview
+## Project Overview
 [cite_start]The robot operates on a **10×10 grid of handles** on a satellite's exterior[cite: 24]. [cite_start]The primary goal is to navigate the surface, manage limited energy resources, and perform complex manipulation tasks such as opening security tailgates[cite: 30].
 
 ---
 
-## ⚙️ Key Constraints & Logic
+## Key Constraints & Logic
 
-### 🏃 Locomotion
+### Locomotion
 * [cite_start]**Stride**: The robot has a stride of 1 handle[cite: 27].
 * [cite_start]**Stability**: To move forward, the robot must have at least **4 legs** firmly grasping handles[cite: 13].
 
-### 🔋 Energy Management
+### Energy Management
 * [cite_start]**Autonomy**: EVR-1 has a maximum autonomy of **100 energy units** when fully charged[cite: 20].
 * [cite_start]**Action Cost**: Every action (moving, sensing, manipulating) has an energetic cost of **1 unit**[cite: 20].
 * [cite_start]**Safety**: The robot must return to the recharging station (located at coordinate **10,10**) before its energy reaches 0[cite: 21, 25].
 
-### 🛠️ Manipulation
+### Manipulation
 * [cite_start]**Versatility**: The robot can switch the main use of one or two legs to use them as **arms** to manipulate objects[cite: 14].
 * [cite_start]**Target**: The outer control panel is located at **(1,1)** and requires pressing two buttons and operating security levers to open the tailgate[cite: 10, 26].
 
 ---
 
-## 📂 Implementation Details
+## Implementation Details
 The project is implemented using **PDDL** (Planning Domain Definition Language) and covers two distinct scenarios:
 
 ### 1. Standard Mission (`domain-3.pddl` & `problem-3.pddl`)
@@ -36,7 +36,7 @@ The project is implemented using **PDDL** (Planning Domain Definition Language) 
 
 ---
 
-## 🚀 How to Run
+## How to Run
 You can run these PDDL files using any standard **STRIPS/Fluents** compatible solver (such as [Planning.Domains](https://solver.planning.domains/)).
 
 1. **Load** the `domain.pddl` file (Standard or Broken version).
